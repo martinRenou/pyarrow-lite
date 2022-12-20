@@ -25,9 +25,6 @@ jobs:
         with:
           micromamba-version: '0.22.0'
 
-      - name: Install
-        run: pip install jupyterlite jupyterlite-xeus-python
-
       - name: Build the JupyterLite site
         run: |
           cp README.md content
