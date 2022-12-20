@@ -24,8 +24,6 @@ jobs:
         uses: mamba-org/provision-with-micromamba@main
         with:
           micromamba-version: '0.22.0'
-          environment-file: environment.yml
-          environment-name: xeus-python-kernel
 
       - name: Install
         run: pip install jupyterlite jupyterlite-xeus-python
