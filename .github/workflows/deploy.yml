@@ -31,7 +31,7 @@ jobs:
       - name: Build the JupyterLite site
         run: |
           cp README.md content
-          jupyter lite build --XeusPythonEnv.packages=numpy,pyarrow --contents content --output-dir dist
+          jupyter lite build --XeusPythonEnv.packages=numpy,arrow-python --contents content --output-dir dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
