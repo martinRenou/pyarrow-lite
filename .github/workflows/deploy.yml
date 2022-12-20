@@ -26,6 +26,7 @@ jobs:
           micromamba-version: '0.22.0'
 
       - name: Build the JupyterLite site
+        shell: bash -l {0}
         run: |
           cp README.md content
           jupyter lite build --XeusPythonEnv.packages=numpy,arrow-python,pytest --contents content --output-dir dist
