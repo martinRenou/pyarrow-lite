@@ -24,12 +24,13 @@ jobs:
         uses: mamba-org/provision-with-micromamba@main
         with:
           micromamba-version: '0.22.0'
+          environment-file: 'build-environment.yml'
 
       - name: Build the JupyterLite site
         shell: bash -l {0}
         run: |
           cp README.md content
-          jupyter lite build --XeusPythonEnv.packages=numpy,arrow-python,xeus-python=0.14.3,pytest,matplotlib --contents content --output-dir dist
+          jupyter lite build --contents content --output-dir dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
